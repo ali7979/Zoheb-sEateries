@@ -1,6 +1,6 @@
 import userModel from "../models/userModel.js";
 import jwt from "jsonwebtoken";
-import bcrypt from "bcrypt";
+import bcrypt from 'bcryptjs';
 import validator from "validator";
 
 //login
@@ -56,8 +56,9 @@ const registerUser = async (req, res) => {
         message: "Please  enter a strong password",
       });
     }
-    const salt = await bcrypt.genSalt(10);
-    const hashedPassword = await bcrypt.hash(password, salt);
+    const salt = bcrypt.genSaltSync(10);
+
+    const hashedPassword = await bcrypt.hashSync(password, salt);
     let newUser = new userModel({
       name: name,
       email: email,
