@@ -1,22 +1,38 @@
 import foodModel from "../models/foodModel.js";
 import fs from 'fs';          //File system package  predefined in node js 
+import {v2 as cloudinary} from 'cloudinary';
+
+
+cloudinary.config({
+    cloud_name: "devfrzibz",
+    api_key: "859893649861859",
+    api_secret: "IQ8p9fuGiQLloj-pu4oLbSnDrgU"
+});
+
+
+
 
 
 const addFood = async (req,res )=>
     {
         let img_filename=`${req.file.filename}`;
+        const rescloud = await cloudinary.uploader.upload(req.file.path);
+        console.log(rescloud);
+
         const food =await new foodModel({
             
             name:req.body.name,
             price:req.body.price,
             description: req.body.description,
             category: req.body.category,
-            image:img_filename
+            image:rescloud.url
         
         });
         try{
             await food.save();
+           
             res.json({success:true,message:"Food Added"})
+
         }
         catch(error)
         {
