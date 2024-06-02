@@ -240,7 +240,7 @@ const PlaceOrder = () => {
 
          
         </Grid>
-        <Grid xs={12} md={6} sx={{ p: { xs: 0, md: 2 },px: { xs: 0, md: 5 } }}>
+        <Grid xs={12} md={6} sx={{mt:{xs: 2, md: 0} ,p: { xs: 0, md: 2 },px: { xs: 0, md: 5 } }}>
 
         <h1 className="poppins-bold">Cart Total</h1>
           <Box sx={{ p: 4, pt: 0 }}>
