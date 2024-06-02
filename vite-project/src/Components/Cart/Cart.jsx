@@ -51,7 +51,7 @@ const Cart = () => {
                       <CartCard
                         id={item._id}
                         name={item.name}
-                        img={url+"/images/"+item.image}
+                        img={item.image}
                         price={item.price}
                         cartItems={cartItems}
                       />

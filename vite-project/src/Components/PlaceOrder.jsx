@@ -91,6 +91,11 @@ const PlaceOrder = () => {
                 value={data.firstName}
                 sx={{ width: "100%" }}
                 variant="outlined"
+                                InputProps={{
+                  sx: {
+                    borderRadius: "30px", // Add border radius here
+                  },
+                }}
                 InputLabelProps={{
                   sx: {
                     fontFamily: "Poppins" /* add other font properties here */,
@@ -106,6 +111,11 @@ const PlaceOrder = () => {
                 name="lastName"
                 onChange={onChangeHandler}
                 value={data.lastName}
+                                InputProps={{
+                  sx: {
+                    borderRadius: "30px", // Add border radius here
+                  },
+                }}
                 sx={{ width: "100%" }}
                 variant="outlined"
                 InputLabelProps={{
@@ -122,6 +132,11 @@ const PlaceOrder = () => {
                 size="small"
                 name="email"
                 onChange={onChangeHandler}
+                                InputProps={{
+                  sx: {
+                    borderRadius: "30px", // Add border radius here
+                  },
+                }}
                 value={data.email}
                 fullWidth
                 variant="outlined"
@@ -139,6 +154,11 @@ const PlaceOrder = () => {
                 fullWidth
                 name="phone"
                 onChange={onChangeHandler}
+                                InputProps={{
+                  sx: {
+                    borderRadius: "30px", // Add border radius here
+                  },
+                }}
                 value={data.phone}
                 variant="outlined"
                 InputLabelProps={{
@@ -152,6 +172,11 @@ const PlaceOrder = () => {
                 required
                 name="street"
                 onChange={onChangeHandler}
+                                InputProps={{
+                  sx: {
+                    borderRadius: "30px", // Add border radius here
+                  },
+                }}
                 value={data.street}
                 size="small"
                 fullWidth
@@ -170,11 +195,19 @@ const PlaceOrder = () => {
                 name="landmark"
                 onChange={onChangeHandler}
                 value={data.landmark}
-                sx={{ width: "100%" }}
+                sx={{ width: "100%" ,borderRadius:"30px" }}
                 variant="outlined"
+                InputProps={{
+                  sx: {
+                    borderRadius: "30px", // Add border radius here
+              
+                  },
+                }}
+
                 InputLabelProps={{
                   sx: {
                     fontFamily: "Poppins" /* add other font properties here */,
+                   
                   },
                 }}
               />
@@ -185,6 +218,11 @@ const PlaceOrder = () => {
                 required
                 name="pincode"
                 onChange={onChangeHandler}
+                                InputProps={{
+                  sx: {
+                    borderRadius: "30px", // Add border radius here
+                  },
+                }}
                 value={data.pincode}
                 size="small"
                 sx={{ width: "100%" }}
@@ -205,6 +243,11 @@ const PlaceOrder = () => {
                 required
                 name="city"
                 onChange={onChangeHandler}
+                                InputProps={{
+                  sx: {
+                    borderRadius: "30px", // Add border radius here
+                  },
+                }}
                 value={data.city}
                 size="small"
                 sx={{ width: "100%" }}
@@ -222,6 +265,11 @@ const PlaceOrder = () => {
                 required
                 name="state"
                 onChange={onChangeHandler}
+                                InputProps={{
+                  sx: {
+                    borderRadius: "30px", // Add border radius here
+                  },
+                }}
                 value={data.state}
                 size="small"
                 sx={{ width: "100%" }}
