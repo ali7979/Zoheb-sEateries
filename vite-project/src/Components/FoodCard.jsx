@@ -23,7 +23,8 @@ const FoodCard = ({id,name,price,desc,image}) => {
         
           component="img"
           height="200"
-          image={url+"/images/"+image}
+          // image={url+"/images/"+image}
+          image={image}
           alt="food"
         />
         <CardContent sx={{p:3}}>
