@@ -8,7 +8,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 //placing user order
 
 const placeOrder = async (req, res) => {
-  const frontendurl = "http://localhost:5173";
+  const frontendurl = "https://zoheb-s-eateries-frontend.vercel.app";
   console.log("inside placeorder")
   try {
     const newOrder = new orderModel({
