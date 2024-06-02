@@ -79,7 +79,7 @@ const Order = ({url}) => {
               className="list-table-format"
              >
               
-              <img alt="item" src={`${url}/images/${item.image}`} />
+              <img alt="item" src={item.image} />
               <p className="poppins-regular">{item.name}</p>
               <p className="poppins-regular">{order.address.firstName} {order.address.lastName}</p>
 
