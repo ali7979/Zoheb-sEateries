@@ -72,7 +72,7 @@ const PlaceOrder = () => {
   return (
     <div>
       <form onSubmit={placeOrder}  className="place-order">
-      <Grid container sx={{ height: "80vh", p: 5 }}>
+      <Grid container sx={{  p: 5 }}>
         <Grid xs={12} md={6} sx={{ p: { xs: 0, md: 2 },px: { xs: 0, md: 5 } }}>
           <h1 className="poppins-bold ">Delivery Information</h1>
 
