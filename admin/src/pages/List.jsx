@@ -41,7 +41,7 @@ const removeFood = async(fid) =>{
       <ToastContainer />
       <h1>All Foods List</h1>
       <div className="list-table">
-        <div className="list-table-format title">
+        <div className="list-table-formatlist title">
           <b>Image</b>
           <b>Name</b>
           <b>Category</b>
@@ -50,7 +50,7 @@ const removeFood = async(fid) =>{
         </div>
         {list.map((item, index) => {
           return (
-          <div key={index} className="list-table-format">
+          <div key={index} className="list-table-formatlist">
             <img src={item.image} alt="image" />
             <p>{item.name}</p>
             <p>{item.category}</p>
