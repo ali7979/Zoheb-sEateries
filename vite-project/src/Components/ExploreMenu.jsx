@@ -2,11 +2,20 @@ import React from 'react'
 import menulist from '../assets/Categories.json'
 import Divider from '@mui/material/Divider';
 import FoodDisplay from '../Components/FoodDisplay'
+import video from '../assets/vdo2.mp4' 
+
 
 const ExploreMenu = ({category,setCategory}) => {
   return (
     <>
     <div>
+<div className="vdobox">
+    <video className="vdo"  height="400"   preload="yes"  playsInline   autoPlay loop muted>
+    <source src={video} type="video/mp4" />
+    Your browser does not support the video tag.
+</video>
+</div>
+
       <div className="explore-menu">
 <h1 className='poppins-bold'>Explore our Menu</h1>
 <p className='poppins-semibold'>

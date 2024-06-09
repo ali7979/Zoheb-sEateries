@@ -139,6 +139,37 @@ h1{
   font-size: 1.2rem;
 }
 
+.vdobox {
+  width: 100% !important;
+  height: 100% !important;
+
+  max-width: 95% !important; /* Optional: limit the maximum width if desired */
+  position: relative; /* Maintain the aspect ratio */
+  overflow: hidden;
+  border-radius: 20px;
+
+margin: auto !important;
+margin: 1.5rem auto !important;
+
+}
+
+.vdo {
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 20px;
+  object-fit:contain !important;
+  
+}
+.explore-menu {
+gap: 0px !important;
+}
+
+.menu-list {
+margin: 0.5em 0 !important;
+}
+
 }
 
 
@@ -658,4 +689,19 @@ width: 100%;
   margin: 0 8px;
   cursor: pointer;
   font-size: 18px;
+}
+
+.vdobox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+  margin: 2rem;;
+}
+
+.vdo {
+  border-radius: 20px !important;
+ width: 90vw;
+ height: 55vh;
+ object-fit:fill
 }
