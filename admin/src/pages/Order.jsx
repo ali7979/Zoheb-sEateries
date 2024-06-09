@@ -27,6 +27,22 @@ const Order = ({url}) => {
         
     } 
   
+
+const statushandler = async (event,orderId) => {
+  
+const resp= await axios.post(url+"/api/order/updatestatus",
+  {
+    orderId,
+    status:event.target.value
+  })
+  if (resp.data.success)
+    {
+await fetchorders();
+console.log(resp);
+    }
+}
+
+
     useEffect(()=>{
        
                 fetchorders()
@@ -53,12 +69,7 @@ const Order = ({url}) => {
 
 
   
-    
- 
- 
-
-
-
+  
   
       
           <h1>My Orders</h1>
@@ -84,7 +95,23 @@ const Order = ({url}) => {
               <p className="poppins-regular">{order.address.firstName} {order.address.lastName}</p>
 
               <p className="poppins-regular">{formatDate(order.date)}</p>
-              <p className="poppins-regular">{order.status}</p>
+              <p className="poppins-regular">
+                
+                
+                
+                <select onChange={(e)=>statushandler(e,order._id)} value={order.status}>
+                <option value="Food Processing">Food Processing</option>
+                <option value="Out for Delivery">Out for Delivery</option>
+                <option value="Delivered">Delivered</option>
+
+
+                </select>
+                
+                {/* {order.status} */}
+                
+                
+                
+                </p>
              
               
            

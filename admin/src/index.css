@@ -198,7 +198,7 @@ p{
   
 }
 .list-table-format{
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: auto;
   gap: 15px;
 }
 .list-table-format.title

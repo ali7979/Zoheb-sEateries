@@ -62,6 +62,7 @@ const Myorders = () => {
 
          {orders.slice().reverse().map((order, orderIndex) => (
           order.items.map((item, itemIndex) => (
+            
             <Grid
               key={`${orderIndex}-${itemIndex}`}
               className="blur"
@@ -70,8 +71,8 @@ const Myorders = () => {
               md={12}
               sx={{ p: 2, my: 4, display: "grid", gridTemplateColumns: "1fr 2fr 2fr 2fr 0.5fr", alignItems: 'center' }}
             >
-              
-              <img className="ordersimg" src={`${url}/images/${item.image}`} />
+             
+              <img className="ordersimg" src={item.image} />
               <h3 className="poppins-regular">{item.name}</h3>
               <h3 className="poppins-regular">{formatDate(order.date)}</h3>
               <h3 className="poppins-regular">{order.status}</h3>

@@ -3,6 +3,7 @@ import { Button, Box,Divider, Grid } from "@mui/material";
 import TextField from "@mui/material/TextField";
 import { StoreContext } from "../context/StoreContext";
 import axios from "axios";
+import {useNavigate} from 'react-router-dom'
 
 
 const PlaceOrder = () => {
@@ -65,13 +66,31 @@ const PlaceOrder = () => {
 
     }
 
-   
+   const navigate = useNavigate();
+
+    useEffect(()=>{
+      if (!token)
+        {
+navigate("/cart")
+alert("Login first")
+        }
+
+        else if(getTotalCartAmount()===0)
+          {
+            navigate("/cart")
+            alert("Add Items first")
+            
+
+          }
+    },[token])
 
 
 
   return (
     <div>
+      
       <form onSubmit={placeOrder}  className="place-order">
+     
       <Grid container sx={{  p: 5 }}>
         <Grid xs={12} md={6} sx={{ p: { xs: 0, md: 2 },px: { xs: 0, md: 5 } }}>
           <h1 className="poppins-bold ">Delivery Information</h1>
