@@ -51,8 +51,7 @@ const PlaceOrder = () => {
     
         }
         let response= await axios.post(url+"/api/order/place",orderData,{headers:{token}})
-        console.log(response);
-        console.log(orderData.items[0].name);
+      
 
         if(response.data.success) {
           const {session_url} =response.data;
@@ -67,6 +66,7 @@ const PlaceOrder = () => {
             from_name:"Zoheb's Eateries" , 
             from_email: "zohebzob@gmail.com" ,
             to_name:name,
+            to_email:orderData.address.email,
             item_name:itemNames,
             total:orderData.amount
           }
