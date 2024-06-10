@@ -4,10 +4,11 @@ import TextField from "@mui/material/TextField";
 import { StoreContext } from "../context/StoreContext";
 import axios from "axios";
 import {useNavigate} from 'react-router-dom'
+import emailjs from '@emailjs/browser';
 
 
 const PlaceOrder = () => {
-  const { getTotalCartAmount,token,foodlist,cartItems,url } = useContext(StoreContext);
+  const { getTotalCartAmount,token,foodlist,cartItems,url,name } = useContext(StoreContext);
 
 
   const [data,setData] = useState ({
@@ -51,20 +52,64 @@ const PlaceOrder = () => {
         }
         let response= await axios.post(url+"/api/order/place",orderData,{headers:{token}})
         console.log(response);
+        console.log(orderData.items[0].name);
 
         if(response.data.success) {
           const {session_url} =response.data;
-          console.log(session_url);
-
+          const srvcid="service_zf3xyis" ;
+          const publickey="q0kW_HNghLfBQfD6Q";
+          const templateid="template_e7ix7eo";
+      
+          const itemNames = orderData.items.map(item => item.name).join(", ");
+      
+          const tempparams ={
+      
+            from_name:"Zoheb's Eateries" , 
+            from_email: "zohebzob@gmail.com" ,
+            to_name:name,
+            item_name:itemNames,
+            total:orderData.amount
+          }
+      
+          await emailjs.send(srvcid, templateid, tempparams, {
+            publicKey: publickey,
+          })
+          .then(
+            () => {
+              console.log('SUCCESS!');
+            },
+            (error) => {
+              console.log('FAILED', error);
+            },
+          );
+  
+  
           window.location.replace(session_url);
-          console.log(session_url);
 
         }
         else {
           alert("Error in placing order");
         }
 
+        
+
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
    const navigate = useNavigate();
 
@@ -86,11 +131,15 @@ alert("Login first")
 
 
 
+    
+
+
   return (
     <div>
       
-      <form onSubmit={placeOrder}  className="place-order">
-     
+      {/* <form onSubmit={placeOrder}  className="place-order"> */}
+           <form   className="place-order">
+
       <Grid container sx={{  p: 5 }}>
         <Grid xs={12} md={6} sx={{ p: { xs: 0, md: 2 },px: { xs: 0, md: 5 } }}>
           <h1 className="poppins-bold ">Delivery Information</h1>
@@ -367,11 +416,14 @@ alert("Login first")
               }}
               variant="contained"
               size="large"
-              type="submit"
-              
+              onClick={placeOrder}
             >
               Proceed to Payment
             </Button>
+
+
+
+           
           </Box>
 
         </Grid>
