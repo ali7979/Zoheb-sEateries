@@ -430,6 +430,10 @@ const onLogin= async (e)=>{
                   label="Password"
                   variant="standard"
                   name="password"
+                  type="password"
+
+                  
+
                   onChange={onChangeHandler}
                   value={data.password}
                 />

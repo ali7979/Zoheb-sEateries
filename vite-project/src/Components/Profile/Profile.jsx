@@ -23,7 +23,7 @@ console.log(name)
         <Grid item xs={12} md={4}>
         <div className='g1'>
         <div className='blob'>
-<img className='imgblob' src={name?'https://res.cloudinary.com/devfrzibz/image/upload/v1717997366/profile_d1qeat.jpg' : 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png'}/>
+<img className='imgblob' src={name=="Zoheb"?'https://res.cloudinary.com/devfrzibz/image/upload/v1717997366/profile_d1qeat.jpg' : 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png'}/>
         </div>
 
         </div>

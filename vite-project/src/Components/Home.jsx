@@ -5,15 +5,18 @@ import Button from '@mui/material/Button';
 import { Link } from '@mui/material';
 import FastfoodIcon from '@mui/icons-material/Fastfood';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function Header() {
-    const isMobile = useMediaQuery('(max-width:600px)'); // Check if the screen size is mobile
-    
+    const navigate = useNavigate();
+    const nmenu=()=>{
+navigate("/menu");
+    }
      
  
   return (
-    <div className='container' style={{height:'80vh'}}>
+    <div className='container' style={{height:'100%'}}>
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 1 }} sx={{mt:{md:-7}}}>
       <Grid item xs={12} md={6} sx={{ display: 'flex', alignItems: 'center' }} >   
        <div className="heading" >
@@ -22,9 +25,9 @@ export default function Header() {
     <p className="poppins-semibold">Build your brand’s recognition and get detailed insights on how your links are performing.</p>
 
     <Button className="btn " 
-            size={isMobile ? "small" : "large"} // Set size to "small" on mobile, otherwise "large"
+            size= "large" 
             sx={{borderRadius:'20px',background:"#576CBC",mt:6 , fontFamily: '"Poppins", sans-serif',paddingInline:"1em",
-  fontWeight: 600}} variant="contained" label="" endIcon={<FastfoodIcon/>}>
+  fontWeight: 600}} variant="contained" label="" endIcon={<FastfoodIcon/>} onClick={nmenu}>
         Order Now
       </Button>
     </div>
