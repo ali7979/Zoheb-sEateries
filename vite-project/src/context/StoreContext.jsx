@@ -8,6 +8,8 @@ const StoreContextProvider = (props) => {
   const url = "https://zoheb-s-eateries-xob8.vercel.app";
   
   const [token, setToken] = useState("");
+  const [name, setname] = useState("");
+
   const [cartItems, setcartItems] = useState({});
 
   const addToCart = async (itemId) => {
@@ -63,6 +65,7 @@ const StoreContextProvider = (props) => {
   const loadCartData = async(token)=>{
     const response = await axios.get(url+"/api/cart/get",{headers:{token}}); // blank {} , as we are not sending any data in body 
     setcartItems(response.data.cartData);
+    setname(response.data.userData.name);
   }
 
 
@@ -89,6 +92,7 @@ const StoreContextProvider = (props) => {
     url,
     token,
     setToken,
+    name
   };
 
   return (

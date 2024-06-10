@@ -62,7 +62,7 @@ const getCart = async (req, res) => {
 try {
     let userData = await userModel.findById(req.body.userId);
     let cartData = await userData.cartData;
-    res.json({success:true , cartData:cartData})
+    res.json({success:true , cartData:cartData ,userData:userData})
 
 } catch (error) {
     console.log(error);
