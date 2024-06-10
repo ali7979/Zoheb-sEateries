@@ -10,7 +10,7 @@ body {
   padding: 0;
   margin: 0;
   /* for vercel deployment */
-  zoom: 90%;      
+  zoom: 100%;      
 }
 .container
 {
@@ -168,6 +168,21 @@ gap: 0px !important;
 
 .menu-list {
 margin: 0.5em 0 !important;
+}
+
+
+.blob{
+  height:250px !important;
+  width:250px !important;
+  border-radius: 30% 70% 67% 33% / 30% 30% 70% 70% !important;
+
+}
+
+.g2 h1 {
+font-size: 2rem !important;
+}
+.css-1td5doz-MuiGrid-root>.MuiGrid-item {
+  padding-top: 0px !important;
 }
 
 }
@@ -705,3 +720,50 @@ width: 100%;
  height: 65vh;
  object-fit:fill
 }
+
+.g1{
+margin-top: 4rem;
+
+}
+.g2{
+  padding: 30px;
+}
+.blob{
+  background-color: #A5D7E8;
+  height: 22rem;
+  width: 22rem;
+  border-radius: 30% 70% 67% 33% / 30% 30% 70% 70% ;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.blob:hover{
+  
+    box-shadow: rgba(50, 50, 93, 0.511) 0px 50px 100px -20px, rgba(0, 0, 0, 0.527) 0px 30px 60px -30px, rgba(10, 37, 64, 0.577) 0px -2px 6px 0px inset;
+  }
+
+  .imgblob {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Ensure the image covers the blob */
+    display: block; /* Remove any inline spacing */
+  }
+
+.til{
+  height:50px;
+  padding: 1.5rem;
+  border-radius: 20px;
+  margin: 0.5rem;
+  background-image: linear-gradient(to left top, #576cbc, #5c5ebe, #684dbb, #7835b5, #8900a9);  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  color:white;
+}
+.til:hover{
+  cursor: pointer;
+  box-shadow: rgba(50, 50, 93, 0.378) 0px 50px 100px -20px, rgba(0, 0, 0, 0.405) 0px 30px 60px -30px, rgba(10, 37, 64, 0.433) 0px -2px 6px 0px inset;
+}
+.b{
+  background-image: linear-gradient(to left bottom, #576cbc, #9657b7, #cc3196, #eb005f, #eb1212);
+}
+.c{
+  background-image: linear-gradient(to bottom, #576cbc, #667aca, #7488d8, #8296e6, #91a5f4);}
+.d{
+  background-image: linear-gradient(to right top, #576cbc, #6e68c7, #8962ce, #a757d0, #c547cc);}

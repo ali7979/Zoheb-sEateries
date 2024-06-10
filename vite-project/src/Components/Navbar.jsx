@@ -152,9 +152,41 @@ const onLogin= async (e)=>{
       // For example:
      navigate("/myorders")
     }
+    if (setting === "Profile") {
+      // Handle logout logic here
+      // For example:
+     navigate("/profile")
+    }
+    if (setting === "Dashboard") {
+      // Handle logout logic here
+      // For example:
+     navigate("/profile")
+    }
   };
 
-
+  
+  const handlephoneclick  = (page) => {
+   
+    if (page === "Home") {
+      // Handle logout logic here
+      // For example:
+     navigate("/home");
+     
+    
+    }
+    if (page === "Blog") {
+      // Handle logout logic here
+      // For example:
+     navigate("/blog");
+    
+    }
+    if (page === "Menu") {
+      // Handle logout logic here
+      // For example:
+     navigate("/menu");
+    
+    }
+  }
 
 
   return (
@@ -216,6 +248,12 @@ const onLogin= async (e)=>{
                   <Typography
                     textAlign="center"
                     sx={{ background: "white", color: "black" }}
+                    onClick={() => {
+                      setActivePage(page);
+                      handlephoneclick(page);
+
+                      handleCloseNavMenu();
+                    }}
                   >
                     {page}
                   </Typography>
@@ -257,6 +295,7 @@ const onLogin= async (e)=>{
                   key={page}
                   onClick={() => {
                     setActivePage(page);
+                   
                     handleCloseNavMenu();
                   }}
                   sx={{
