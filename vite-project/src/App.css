@@ -65,7 +65,11 @@ body {
   body{
     zoom: 100%;
   }
-
+  .stickybtn
+  {
+    padding: 15px 20px !important;
+    font-weight: 600 !important;
+  }
 
   .container {
     height: 50vh; /* Set height to 50vh for screens smaller than 600px (phones) */

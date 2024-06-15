@@ -84,7 +84,7 @@ const PlaceOrder = () => {
       
           const tempparams ={
       
-            from_name:"Zoheb's Eateries" , 
+            from_name:"Zoheb's Eatery" , 
             from_email: "zohebzob@gmail.com" ,
             to_name:name,
             to_email:orderData.address.email,
