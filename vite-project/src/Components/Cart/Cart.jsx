@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext ,useEffect} from "react";
 import "./Cart.css";
 import { StoreContext } from "../../context/StoreContext";
 import CartCard from "./CartCard";
@@ -9,11 +9,16 @@ import { useNavigate } from "react-router-dom";
 const Cart = () => {
   const { foodlist, cartItems, removeCart,getTotalCartAmount,url } = useContext(StoreContext);
   let navigate=useNavigate();
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
+  window.scrollTo(0, 0);
   return (
     <div className="container" style={{ height: "80vh" }}>
-      <Grid container sx={{ height: "80vh" }}>
+      <Grid container sx={{ height: "80vh",mt:{ xs: 0, md: 4 } }}>
         <Grid xs={12} md={6} sx={{ px: { xs: 0, md: 4 }, pb: 0, mb: 0 }}>
-          <h1 className="poppins-bold"> Cart</h1>
+          <h1 className="poppins-bold carttxxt"> Cart</h1>
           {Object.keys(cartItems).length === 0 ? (
             <div
               style={{
@@ -62,7 +67,7 @@ const Cart = () => {
             </div>
           )}
         </Grid>
-        <Grid xs={12} md={6} sx={{ px: { xs: 0, md: 4 },py: { xs: 0, md: 2 }, my: { xs: 0, mt: 2 } }}>
+        <Grid className="carttotal"   xs={12} md={6} sx={{ px: { xs: 0, md: 4 },py: { xs: 0, md: 2 }, my: { xs: 0, mt: 2 } }}>
           <h1 className="poppins-bold">Cart Total</h1>
           <Box sx={{ p: 4, pt: 0 }}>
             <div style={{ display: "flex", justifyContent: "space-between" }}>

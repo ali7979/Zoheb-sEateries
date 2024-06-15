@@ -261,6 +261,7 @@ const onLogin= async (e)=>{
               ))}
             </Menu>
           </Box>
+          
           <Typography
             variant="h5"
             noWrap
@@ -277,8 +278,10 @@ const onLogin= async (e)=>{
               textDecoration: "none",
             }}
           >
-            <img src={Logo} style={{ height: "3rem" }} />
-          </Typography>
+                      <NavLink to={"/"}>
+
+            <img src={Logo} style={{ height: "4rem",margin:"1rem 0rem",marginBottom:"0rem" }} />
+         </NavLink> </Typography>
           <Box
             sx={{
               flexGrow: 1,

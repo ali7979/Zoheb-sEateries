@@ -10,6 +10,7 @@ import emailjs from '@emailjs/browser';
 const PlaceOrder = () => {
   const { getTotalCartAmount,token,foodlist,cartItems,url,name } = useContext(StoreContext);
 
+  const [isSubmitting, setIsSubmitting] = useState("true");
 
   const [data,setData] = useState ({
     firstName:"",
@@ -31,10 +32,30 @@ const PlaceOrder = () => {
     setData(data=>({...data,[name]:value}))
   }
 
+  const isFormValid = () => {
+  
+    return (
+      data.firstName !== "" &&
+    data.lastName !== "" &&
+    data.email !== "" &&
+    data.street !== "" &&
+    data.city !== "" &&
+    data.state !== "" &&
+    data.pincode !== "" &&
+    data.landmark !== "" &&
+    data.phone !== ""
+    );
+  };
+
 
   const placeOrder= async (event) =>
     {
         event.preventDefault();
+        if (!isFormValid()) {
+          alert("Please fill in all required fields.");
+          return;
+        }
+        setIsSubmitting(true);
         let orderItems= [];
         foodlist.map((item)=>{
           if (cartItems[item._id]>0)
@@ -127,7 +148,16 @@ alert("Login first")
             
 
           }
-    },[token])
+
+         if(isFormValid()){
+          setIsSubmitting(false)
+         }
+         else
+         {
+          setIsSubmitting(true)
+         }
+        
+    },[token,data])
 
 
 
@@ -258,7 +288,7 @@ alert("Login first")
             <Grid item xs={12} sm={6}>
               <TextField
                 label="Landmark"
-                required
+                
                 size="small"
                 name="landmark"
                 onChange={onChangeHandler}
@@ -417,6 +447,7 @@ alert("Login first")
               variant="contained"
               size="large"
               onClick={placeOrder}
+              disabled={ isSubmitting }
             >
               Proceed to Payment
             </Button>

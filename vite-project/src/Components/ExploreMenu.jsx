@@ -1,11 +1,21 @@
 import React from 'react'
+import { useContext } from "react";
+import { StoreContext } from "../context/StoreContext";
+
+
 import menulist from '../assets/Categories.json'
 import Divider from '@mui/material/Divider';
 import FoodDisplay from '../Components/FoodDisplay'
 import video from '../assets/vdo2.mp4' 
+import { Button } from '@mui/material';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { Badge,Checkbox } from "@mui/material";
+import { Navigate, useNavigate } from "react-router-dom";
 
 
 const ExploreMenu = ({category,setCategory}) => {
+  const {  cartItems } = useContext(StoreContext);
+const navigate = useNavigate();
   return (
     <>
     <div>
@@ -49,7 +59,30 @@ return(
 
     </div>
 
-    <FoodDisplay category={category} /></>
+    <FoodDisplay category={category} />
+    
+    
+    
+    
+    
+    <Button
+        variant="outline"
+      
+        className='stickybtn'
+      
+        onClick={() => {navigate("/cart")}}
+      >
+        Go To Cart
+  
+           <Badge badgeContent={Object.keys(cartItems).length} color="primary"> <ShoppingCartIcon sx={{ml:1}} /></Badge>
+         
+      </Button>
+    
+    
+    
+    
+    
+    </>
   )
 }
 
