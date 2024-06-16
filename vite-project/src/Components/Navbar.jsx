@@ -24,7 +24,7 @@ import { Badge,Checkbox } from "@mui/material";
 import axios from 'axios';
 
 
-const pages = ["Home", "Menu", "Blog"];
+const pages = ["Home", "Menu", "Contact Us"];
 const settings = ["Profile", "My Order", "Dashboard", "Logout"];
 
 const style = {
@@ -64,6 +64,13 @@ function ResponsiveAppBar() {
     }
   });
   
+  function Pathfn (page)
+  {
+    if (page==="Contact Us")
+    return "/contactus"
+    else
+      return `/${page.toLowerCase()}`
+  }
 
 
   const {  cartItems } = useContext(StoreContext);
@@ -174,10 +181,10 @@ const onLogin= async (e)=>{
      
     
     }
-    if (page === "Blog") {
+    if (page === "Contact Us") {
       // Handle logout logic here
       // For example:
-     navigate("/blog");
+     navigate("/contactus");
     
     }
     if (page === "Menu") {
@@ -291,7 +298,7 @@ const onLogin= async (e)=>{
             {pages.map((page) => (
               <NavLink
                 style={{ borderBottom: "none", textDecoration: "none" }}
-                to={`/${page.toLowerCase()}`}
+                to={Pathfn(page)}
               >
                 {" "}
                 <Button
@@ -299,6 +306,7 @@ const onLogin= async (e)=>{
                   onClick={() => {
                     setActivePage(page);
                    
+
                     handleCloseNavMenu();
                   }}
                   sx={{
