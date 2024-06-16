@@ -240,6 +240,12 @@ font-size: 2rem !important;
   padding-top: 0px !important;
 }
 
+.thnkbox
+{
+  
+  margin-top: 0rem !important;
+}
+
 }
 
 
@@ -829,6 +835,7 @@ margin-top: 4rem;
   
   width: 100%;
  
+ 
 
 }
 .contactcard{
@@ -839,4 +846,32 @@ margin-top: 4rem;
 {
   text-align: center;
 }
+.thnkbox
+{
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+.thankyou
+{
+  width: 10rem;
+}
+.thnktxt{
+  text-align: center;
+}
+.thnktxt h3{
+  font-weight: 500 !important;
+
+}
+.thnktxt button{
+border-radius: 2rem;
+padding: 0.8rem;
+margin: 2rem;
+}
+.thnktxt button:hover{
+
+background: #0135FD;
+background: radial-gradient(at left bottom, #0135FD, #F10D6C);
+  color: white;
+  }
 

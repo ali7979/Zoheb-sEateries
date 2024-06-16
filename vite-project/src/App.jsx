@@ -16,6 +16,7 @@ import Myorders from './Components/Profile/Myorders';
 import Footer from './Components/Footer/Footer';
 import Profile from './Components/Profile/Profile';
 import ContactUs from './Components/ContactUs';
+import ThankYou from './Components/ThankYou';
 
 
 
@@ -40,6 +41,7 @@ function App() {
 <Route path="/verify" element={<Verify/>} />
 <Route path="/myorders" element={<Myorders/>} />
 <Route path="/contactus" element={<ContactUs/>} />
+<Route path="/thankyou" element={<ThankYou/>} />
 
 <Route path="/profile" element={<Profile/>} />
 
