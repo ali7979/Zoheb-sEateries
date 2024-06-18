@@ -137,6 +137,7 @@ background: transparent;
   margin-inline: 2rem !important;
 
 }
+
 .explore-menu{
   margin-left: 1rem !important;
 }
@@ -245,6 +246,79 @@ font-size: 2rem !important;
   
   margin-top: 0rem !important;
 }
+
+
+
+
+
+.food-display {
+  margin-inline: 1.5rem !important;
+}
+
+.foodlist {
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)) !important;
+  row-gap: 0.8rem !important;
+  column-gap: 0.8rem !important;
+}
+
+.food-card {
+  width: 100%;
+}
+
+.food-card img 
+{
+  height: 5rem !important;
+}
+.n
+{
+ font-size: 0.6rem !important;
+ 
+}
+
+.cardd
+{height: 10rem !important;}
+
+.description {
+  display: none;
+}
+.chip
+{
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 0.5rem !important;
+  font-weight:100!important;
+  height: 1.2rem !important;
+ right: 0;
+  margin-right: 0.5rem !important;
+top: 55px !important;
+  
+
+}
+
+
+.circle
+{
+  margin-top: 0 !important;
+padding: 0 !important;
+}
+.add , .subtract{
+
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 1rem !important;
+  width: 1rem !important;
+  margin-top: 1rem !important;
+ 
+}
+.cn{
+  height: 1rem !important;
+  font-size: 0.5rem !important;
+  
+}
+.cn .add,.subtract{
+  margin-top: 0rem !important;
+}
+
 
 }
 

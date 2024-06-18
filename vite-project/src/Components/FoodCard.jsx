@@ -17,7 +17,7 @@ const FoodCard = ({id,name,price,desc,image}) => {
   return (
     <div className='food-card'>
   
-  <Card sx={{ width: '90%', height: '29rem', borderRadius: '15px 15px 0px 0px', boxShadow: '0px 10px 10px #00000015'}}>
+  <Card className='cardd' sx={{ width: '90%', height: '29rem', borderRadius: '15px 15px 0px 0px', boxShadow: '0px 10px 10px #00000015'}}>
       <CardActionArea>
         <CardMedia
         
@@ -27,24 +27,24 @@ const FoodCard = ({id,name,price,desc,image}) => {
           image={image}
           alt="food"
         />
-        <CardContent sx={{p:3}}>
-          <Typography className='poppins-bold' gutterBottom variant="h5" component="div">
+        <CardContent sx={{ p: { xs: 1.5, md: 3 } }}>
+          <Typography className='n poppins-bold' gutterBottom variant="h5" component="div">
             {name}
             
           </Typography>
-          <Typography sx={{minHeight:90}} className='poppins-light' color="text.secondary">
+          <Typography sx={{minHeight:90}} className='description poppins-light' color="text.secondary">
             {desc}
           </Typography>
-          <Chip   className='poppins-bold' label={`₹ ${price}`} sx={{backgroundColor:'#576CBC', color:'#fff',position:'absolute',top:'150px',p:1.5,fontSize:'1rem'}} />
+          <Chip   className='chip poppins-bold' label={`₹ ${price}`} sx={{backgroundColor:'#576CBC', color:'#fff',position:'absolute',top:'150px',p:1.5,fontSize:'1rem'}} />
        
          
-          <Typography className='poppins-semibold' sx={{mt:5,fontSize:'1.3rem'}} >         
+          <Typography className=' circle poppins-semibold' sx={{mt:5,fontSize:'1.3rem'}} >         
   {!cartItems[id] ? (
     <AddCircleOutlineIcon className='add' sx={{fontSize:'2rem',color:'green'}} onClick={() => addToCart(id)} />
   ) : (
     <div className='food-item-counter'>
             <div className="cn">
-      <RemoveCircleOutlineIcon onClick={() => removeCart(id)} sx={{color:'red',fontSize:'1.8rem'}} />
+      <RemoveCircleOutlineIcon className='subtract' onClick={() => removeCart(id)} sx={{color:'red',fontSize:'1.8rem'}} />
     <p>{cartItems[id]}</p> 
       <AddCircleOutlineIcon className='add' onClick={() =>  addToCart(id)} sx={{color:'green',fontSize:'1.8rem'}} />
     </div>
