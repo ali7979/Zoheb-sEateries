@@ -7,7 +7,7 @@ const FoodDisplay = ({category}) => {
     const {foodlist} =useContext(StoreContext)
   return (
     <>
-          <h1 className='poppins-bold' style={{margin:'3rem 4rem'}}>Top dishes near you</h1>
+          <h1 className='poppins-bold topdishes' style={{margin:'3rem 4rem'}}>Top dishes near you</h1>
 
     <div className='food-display' id='food-display'>
       <div className="foodlist">

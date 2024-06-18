@@ -67,8 +67,9 @@ body {
   }
   .stickybtn
   {
-    padding: 15px 20px !important;
+    padding: 12px 15px !important;
     font-weight: 600 !important;
+    font-size: 0.8rem !important;
   }
 
   .container {
@@ -257,13 +258,20 @@ font-size: 2rem !important;
 
 .foodlist {
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)) !important;
-  row-gap: 0.8rem !important;
+  row-gap: 0.9rem !important;
   column-gap: 0.8rem !important;
+  margin-inline:0.1rem !important
 }
 
 .food-card {
-  width: 100%;
+  width: 108%;
 }
+.topdishes{
+  margin: 1.5rem !important;
+  text-align: center;
+  
+}
+
 
 .food-card img 
 {
@@ -271,12 +279,12 @@ font-size: 2rem !important;
 }
 .n
 {
- font-size: 0.6rem !important;
+ font-size: 0.65rem !important;
  
 }
 
 .cardd
-{height: 10rem !important;}
+{height: 11rem !important;}
 
 .description {
   display: none;
@@ -313,6 +321,7 @@ padding: 0 !important;
 .cn{
   height: 1rem !important;
   font-size: 0.5rem !important;
+  margin-top: 1rem !important;
   
 }
 .cn .add,.subtract{
