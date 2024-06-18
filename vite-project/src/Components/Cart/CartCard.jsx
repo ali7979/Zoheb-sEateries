@@ -56,7 +56,7 @@ export default function CartCard({id,name,img,price,cartItems}) {
             <div className="cnn">
       <RemoveCircleOutlineIcon onClick={() =>  removeCart(id)}  sx={{color:'red', fontSize: { xs: '1.4rem', sm: '1.8rem' } , cursor:'pointer'}} />
     <h2  style={{display:'contents'}}>{cartItems[id]}</h2> 
-      <AddCircleOutlineIcon className='add' onClick={() =>  addToCart(id)} sx={{color:'green', fontSize: { xs: '1.4rem', sm: '1.8rem' },cursor:'pointer'}} />
+      <AddCircleOutlineIcon  onClick={() =>  addToCart(id)} sx={{color:'green', fontSize: { xs: '1.4rem', sm: '1.8rem' },cursor:'pointer'}} />
     </div>
     </div>
         </Box>
