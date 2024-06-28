@@ -10,7 +10,7 @@ body {
   padding: 0;
   margin: 0;
   /* for vercel deployment */
-  zoom: 100%;      
+  zoom: 90%;      
 }
 .container
 {
@@ -153,6 +153,7 @@ background: transparent;
   height: 35vh !important;
   box-shadow: inset 0px 26px 25px -3px rgba(0,0,0,0.1);
   margin-inline: 0 !important;
+  animation: both 2s;
 }
 .ordersimg{
   height: 20px !important;
@@ -264,7 +265,7 @@ font-size: 2rem !important;
 }
 
 .food-card {
-  width: 108%;
+  width: 90% !important;
 }
 .topdishes{
   margin: 1.5rem !important;
@@ -275,7 +276,7 @@ font-size: 2rem !important;
 
 .food-card img 
 {
-  height: 5rem !important;
+  height: 5.8rem !important;
 }
 .n
 {
@@ -304,6 +305,7 @@ top: 55px !important;
 }
 
 
+
 .circle
 {
   margin-top: 0 !important;
@@ -327,7 +329,10 @@ padding: 0 !important;
 .cn .add,.subtract{
   margin-top: 0rem !important;
 }
-
+.backbtn{
+  display: block !important;
+  position: absolute !important;
+}
 
 }
 
@@ -797,6 +802,8 @@ width: 100%;
   font-size: 1.3rem;
   margin-bottom: 1rem;
   font-weight: bold;
+
+
 }
 
 .links li {
@@ -958,3 +965,20 @@ background: radial-gradient(at left bottom, #0135FD, #F10D6C);
   color: white;
   }
 
+
+  .food-card {
+    width: 90% !important;
+   
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .food-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+    display: flex !important;
+    flex-direction: row !important;
+ }
+  
+  
+
+  

@@ -16,10 +16,11 @@ export default function CartCard({id,name,img,price,cartItems}) {
   const { addToCart, removeCart } = useContext(StoreContext);
 
   return (
-<Card sx={{ 
+<Card className='fdcard' sx={{ 
   display: 'flex', 
   flexDirection: 'row', 
   m: 2, 
+ 
   borderRadius: '20px', 
   boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)', // Adding a subtle shadow
   transition: 'box-shadow 0.3s ease-in-out', // Adding transition for smooth effect

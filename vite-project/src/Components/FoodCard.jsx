@@ -17,7 +17,7 @@ const FoodCard = ({id,name,price,desc,image}) => {
   return (
     <div className='food-card'>
   
-  <Card className='cardd' sx={{ width: '90%', height: '29rem', borderRadius: '15px 15px 0px 0px', boxShadow: '0px 10px 10px #00000015'}}>
+  <Card className='cardd' sx={{ width: '100%', height: '29rem', borderRadius: '15px 15px 0px 0px', boxShadow: '0px 10px 10px #00000015'}}>
       <CardActionArea>
         <CardMedia
         
