@@ -84,7 +84,8 @@ import WestIcon from '@mui/icons-material/West';const Cart = () => {
             <div style={{ display: "flex", justifyContent: "space-between" }}>
               <h3 className="poppins-light">Delivery fee</h3>
               <h3 className="poppins-light" style={{ textAlign: "right" }}>
-              ₹ 35.00
+              {
+              getTotalCartAmount()==0 ?"0": "₹ 35.00"} 
               </h3>{" "}
               {/* Example amount */}
             </div>
@@ -95,8 +96,8 @@ import WestIcon from '@mui/icons-material/West';const Cart = () => {
             <div style={{ display: "flex", justifyContent: "space-between" }}>
               <h3 className="poppins-light">Tax</h3>
               <h3 className="poppins-light" style={{ textAlign: "right" }}>
-              ₹ 5.00
-              </h3>{" "}
+              {
+              getTotalCartAmount()==0 ?"0": "₹ 5.00"}               </h3>{" "}
               {/* Example amount */}
             </div>
             <Divider
@@ -106,7 +107,8 @@ import WestIcon from '@mui/icons-material/West';const Cart = () => {
             <div style={{ display: "flex", justifyContent: "space-between" }}>
               <h3 className="poppins-medium">Total</h3>
               <h3 className="poppins-medium" style={{ textAlign: "right" }}>
-              ₹ {getTotalCartAmount()+40}
+              ₹  {
+              getTotalCartAmount()==0 ?"0": getTotalCartAmount()+40} 
               </h3>{" "}
             
 

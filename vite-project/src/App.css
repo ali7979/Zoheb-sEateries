@@ -10,7 +10,7 @@ body {
   padding: 0;
   margin: 0;
   /* for vercel deployment */
-  zoom: 90%;      
+  zoom: 90%;    
 }
 .container
 {
