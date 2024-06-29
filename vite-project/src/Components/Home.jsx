@@ -22,7 +22,10 @@ navigate("/menu");
        <div className="heading" >
     <h1  className='poppins-extrabold'>Good <span className='ylw'>Food</span> <div>for Good <span className='yl'>Mood</span></div></h1>
     
-    <p className="poppins-semibold">Build your brand’s recognition and get detailed insights on how your links are performing.</p>
+    <p className="poppins-semibold">Experience Culinary Bliss
+With Every Mouthful.
+From Our Kitchen to Your Table,
+Bringing Joyful Flavors</p>
 
     <Button className="btn " 
             size= "large" 
