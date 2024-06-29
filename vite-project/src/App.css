@@ -73,7 +73,7 @@ body {
   }
 
   .container {
-    height: 50vh; /* Set height to 50vh for screens smaller than 600px (phones) */
+    height: 100vh !important; /* Set height to 50vh for screens smaller than 600px (phones) */
     width: 100%  !important;
   }
   .heading{
@@ -249,7 +249,10 @@ font-size: 2rem !important;
   margin-top: 0rem !important;
 }
 
-
+.mainfooter{
+ 
+  margin-top: 1rem !important;
+}
 
 
 
