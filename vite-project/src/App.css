@@ -65,6 +65,15 @@ body {
   body{
     zoom: 100%;
   }
+.heading{
+  z-index: 999 !important;
+}
+.spline{
+  position: absolute !important;
+    top: 12rem !important;
+    z-index: 0;
+}
+
   .stickybtn
   {
     padding: 12px 15px !important;
@@ -73,7 +82,7 @@ body {
   }
 
   .container {
-    height: 100vh !important; /* Set height to 50vh for screens smaller than 600px (phones) */
+    height: 50vh ; /* Set height to 50vh for screens smaller than 600px (phones) */
     width: 100%  !important;
   }
   .heading{

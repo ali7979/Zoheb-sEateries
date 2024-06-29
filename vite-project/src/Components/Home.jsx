@@ -38,7 +38,7 @@ navigate("/menu");
   <Grid item xs={12} md={6}>  
     <div className='container'> 
     {/* <Spline  scene="https://prod.spline.design/ZqkYaZBFkTp3yuN7/scene.splinecode" style={{position:'absolute' , top:0 ,left:0}} /> */}
-   <Spline scene="https://prod.spline.design/SEogRtqy0Y0sUCtt/scene.splinecode" />
+   <Spline className='spline' scene="https://prod.spline.design/SEogRtqy0Y0sUCtt/scene.splinecode" />
 
 </div>
   </Grid>
