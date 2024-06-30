@@ -9,13 +9,15 @@ import Chip from '@mui/material/Chip';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
 import { StoreContext } from '../context/StoreContext';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const FoodCard = ({id,name,price,desc,image}) => {
-
+  AOS.init();
     const {cartItems,addToCart,removeCart,url} = useContext(StoreContext)
 
   return (
-    <div className='food-card'>
+    <div  data-aos="zoom-in"  className='food-card'>
   
   <Card className='cardd' sx={{ width: '100%', height: '29rem', borderRadius: '15px 15px 0px 0px', boxShadow: '0px 10px 10px #00000015'}}>
       <CardActionArea>
