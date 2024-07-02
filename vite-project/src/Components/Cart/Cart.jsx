@@ -41,11 +41,14 @@ import WestIcon from '@mui/icons-material/West';const Cart = () => {
               className="scrollcart"
               style={{
                 marginTop: "1rem",
-                marginInline:"-1rem",
                 height: "60vh",
                 overflow: "scroll",
                 overflowX: "hidden",
-                // Make scrollbar thin (for Firefox)
+                
+
+borderRadius:'1rem',
+padding:'0.2rem',
+boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",                // Make scrollbar thin (for Firefox)
                 msOverflowStyle: "none", // Hide scrollbar in IE
               }}
             >

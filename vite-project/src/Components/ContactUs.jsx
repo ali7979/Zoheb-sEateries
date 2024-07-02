@@ -67,9 +67,9 @@ const Blog = () => {
   };
 
   return (
-    <div>
+    <div style={{display:'flex',flexDirection:'column',alignContent:'center',justifyContent:'center'}}>
       <Grid container>
-        <Grid item xs={12} md={5} sx={{ pt: 0, mt: "-3rem", mb: 0, pb: 0 }}>
+        <Grid item xs={12} md={5} sx={{ pt: 0, mt: "-5rem", mb: 0, pb: 0 }}>
           <img src={contac} />
         </Grid>
 

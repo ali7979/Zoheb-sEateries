@@ -15,8 +15,8 @@ export default function CartCard({id,name,img,price,cartItems}) {
   const theme = useTheme();
   const { addToCart, removeCart } = useContext(StoreContext);
 
-  return (
-<Card className='fdcard' sx={{ 
+return (
+<Card   className='fdcard' sx={{ 
   display: 'flex', 
   flexDirection: 'row', 
   m: 2, 

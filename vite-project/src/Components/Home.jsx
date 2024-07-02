@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Spline from '@splinetool/react-spline';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
@@ -6,6 +6,7 @@ import { Link } from '@mui/material';
 import FastfoodIcon from '@mui/icons-material/Fastfood';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useNavigate } from 'react-router-dom';
+import Spinner from './Spinners/Spinner';
 
 
 export default function Header() {
@@ -13,10 +14,12 @@ export default function Header() {
     const nmenu=()=>{
 navigate("/menu");
     }
-     
+    
+   
  
   return (
     <div className='container' style={{height:'100%'}}>
+
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 1 }} sx={{mt:{md:-7}}}>
       <Grid item xs={12} md={6} sx={{ display: 'flex', alignItems: 'center' }} >   
        <div className="heading" >

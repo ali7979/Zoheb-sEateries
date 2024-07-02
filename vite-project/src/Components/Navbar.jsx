@@ -406,10 +406,11 @@ const onLogin= async (e)=>{
                 <CloseIcon />
               </IconButton>
               <Typography
-                className="poppins-semibold"
+                className="poppins-semibold "
                 id="modal-modal-title"
                 variant="h6"
                 component="h1"
+                sx={{fontSize:'1.6rem !important'}}
               >
                 Sign Up
               </Typography>
@@ -452,7 +453,7 @@ const onLogin= async (e)=>{
                   className="poppins-mediumc"
                   sx={{mt:2,marginInline:-1.5 }}
                   
-                > <Checkbox/> I accept the terms of use and privacy policy </Typography>
+                > <Checkbox/> I accept the terms & conditions</Typography>
    
                 
                 <Typography
@@ -520,6 +521,8 @@ const onLogin= async (e)=>{
                 id="modal-modal-title"
                 variant="h6"
                 component="h1"
+                sx={{fontSize:'1.6rem !important'}}
+
               >
                 Sign In
               </Typography>

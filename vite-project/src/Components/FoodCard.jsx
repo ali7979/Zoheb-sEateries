@@ -13,6 +13,11 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const FoodCard = ({id,name,price,desc,image}) => {
+
+
+
+
+  
   AOS.init();
     const {cartItems,addToCart,removeCart,url} = useContext(StoreContext)
 

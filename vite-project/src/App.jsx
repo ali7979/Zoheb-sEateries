@@ -4,7 +4,7 @@ import './App.css'
 import Navbar from './Components/Navbar';
 import Home from './Components/Home';
 import ExploreMenu from './Components/ExploreMenu';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import FoodDisplay from './Components/FoodDisplay';
 import { Route, Routes } from 'react-router-dom';
 
@@ -17,6 +17,7 @@ import Footer from './Components/Footer/Footer';
 import Profile from './Components/Profile/Profile';
 import ContactUs from './Components/ContactUs';
 import ThankYou from './Components/ThankYou';
+import Spinner from './Components/Spinners/Spinner';
 
 
 
@@ -28,6 +29,20 @@ import ThankYou from './Components/ThankYou';
 
 function App() {
   const [category,setCategory]=useState("All");
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    // Set a timer to hide the loading screen after 3 seconds
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000); // Adjust the duration as needed
+
+    // Cleanup the timer on component unmount
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <Spinner />;
+  }
   return (
     <>
     <Navbar />
