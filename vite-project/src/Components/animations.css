@@ -1,0 +1,69 @@
+/* animations.css */
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+     
+  }
+  
+  @keyframes scaleIn {
+    0% {
+      transform: scale(0.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  .slide-in-left {
+    animation: slideInLeft 1.5s ease-in-out;
+  }
+  
+  .scale-in {
+    animation: scaleIn 1.5s ease-in-out ;
+  }
+  
+  .float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .button-hover {
+    transition: transform 0.2s;
+  }
+  
+  .button-hover:hover {
+    transform: scale(1.1);
+  }
+  
+  .button-hover:active {
+    transform: scale(0.9);
+  }
+  

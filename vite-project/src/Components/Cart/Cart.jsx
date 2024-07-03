@@ -15,8 +15,8 @@ import WestIcon from '@mui/icons-material/West';const Cart = () => {
 
   window.scrollTo(0, 0);
   return (
-    <div className="container" style={{ height: "80vh" }}>
-      <Grid container sx={{ height: "80vh",mt:{ xs: 0, md: 4 } }}>
+    <div className="container" style={{ height: "100%" }}>
+      <Grid container sx={{ height: "100%",mt:{ xs: 0, md: 4 } }}>
         <Grid xs={12} md={6} sx={{ px: { xs: 0, md: 4 }, pb: 0, mb: 0 }}>
           <h1 className="poppins-bold carttxxt"><Button className="backbtn" onClick={()=>{navigate("/")}} sx={{color:'black',display:"none"}}><WestIcon  /></Button> Cart</h1>
           {Object.keys(cartItems).length === 0 ? (

@@ -18,7 +18,7 @@ const FoodCard = ({id,name,price,desc,image}) => {
 
 
   
-  AOS.init();
+  AOS.init({offset: 50,duration: 300});
     const {cartItems,addToCart,removeCart,url} = useContext(StoreContext)
 
   return (
@@ -39,7 +39,7 @@ const FoodCard = ({id,name,price,desc,image}) => {
             {name}
             
           </Typography>
-          <Typography sx={{minHeight:90}} className='description poppins-light' color="text.secondary">
+          <Typography sx={{minHeight:80,maxHeight:80}} className='description poppins-light' color="text.secondary">
             {desc}
           </Typography>
           <Chip   className='chip poppins-bold' label={`₹ ${price}`} sx={{backgroundColor:'#576CBC', color:'#fff',position:'absolute',top:'150px',p:1.5,fontSize:'1rem'}} />
