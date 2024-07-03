@@ -10,7 +10,7 @@ body {
   padding: 0;
   margin: 0;
   /* for vercel deployment */
-  zoom: 90%;    
+  zoom: 100%;    
 }
 .container
 {
@@ -58,7 +58,7 @@ body {
 }
 
 .heading{
-  padding: 7rem !important;
+  padding: 7rem 5rem;
 }
 
 .btn {
@@ -117,7 +117,9 @@ body {
     top: 15rem !important;
     z-index: 0;
 }
-
+.heading{
+  padding:   2rem !important;
+}
   .stickybtn
   {
     padding: 12px 15px !important;
@@ -992,6 +994,8 @@ margin-top: 4rem;
  
 
 }
+
+
 .contactcard{
   background-image: linear-gradient(to left top, #576cbc, #5589cc, #64a5d7, #80bfe0, #a5d7e8);
 }
@@ -1045,7 +1049,6 @@ background: radial-gradient(at left bottom, #0135FD, #F10D6C);
   
   
 
-  
-.myorderbg{
-  background: #a3ceee63;
+ .myorderbg{
+  background: #d8f3fc!important;
 }
