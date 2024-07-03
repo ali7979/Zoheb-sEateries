@@ -110,15 +110,21 @@ body {
     zoom: 100%;
   }
 .heading{
-  z-index: 999 !important;
+  z-index: 1999 !important;
+
+}
+.heading button{
+  z-index: 9999 !important;
+  
 }
 .spline{
   position: absolute !important;
     top: 15rem !important;
-    z-index: 0;
+    
 }
 .heading{
   padding:   2rem !important;
+  padding-bottom: 5rem !important;
 }
   .stickybtn
   {

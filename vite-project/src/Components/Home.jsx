@@ -21,7 +21,7 @@ export default function Header() {
                             Good <span className='ylw'>Food</span> 
                             <div>for Good <span className='yl'>Mood</span></div>
                         </h1>
-                        <p className="poppins-semibold fade-in" style={{ animationDelay: '1s' }}>
+                        <p className="poppins-semibold fade-in" style={{ animationDelay: '0.8s' }}>
                             Experience Culinary Bliss With Every Mouthful. 
                             From Our Kitchen to Your Table, Bringing Joyful Flavors
                         </p>
