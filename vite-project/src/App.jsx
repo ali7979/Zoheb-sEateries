@@ -11,7 +11,6 @@ import { Route, Routes } from 'react-router-dom';
 import Cart from './Components/Cart/Cart';
 import PlaceOrder from './Components/PlaceOrder';
 import Verify from './Components/Verify';
-import MyOrders from './Components/MyOrders';
 import Myorders from './Components/Profile/Myorders';
 import Footer from './Components/Footer/Footer';
 import Profile from './Components/Profile/Profile';
