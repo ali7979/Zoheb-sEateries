@@ -40,7 +40,7 @@
   }
   
   .fade-in {
-    animation: fadeIn 1.5s ease-in-out;
+    animation: fadeIn 0.7s ease-in-out;
   }
   
   .slide-in-left {
@@ -48,7 +48,7 @@
   }
   
   .scale-in {
-    animation: scaleIn 1.5s ease-in-out ;
+    animation: scaleIn 0.7s ease-in-out ;
   }
   
   .float {
@@ -65,5 +65,22 @@
   
   .button-hover:active {
     transform: scale(0.9);
+  }
+
+
+  @media screen and (max-width: 600px) {
+
+    
+      
+      .slide-in-left {
+        animation: none;
+      }
+      
+    
+      
+      .float {
+        animation: fadeIn 0.7s ease-in-out;
+      }
+    
   }
   

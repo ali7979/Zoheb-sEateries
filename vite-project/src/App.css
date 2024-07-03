@@ -58,7 +58,7 @@ body {
 }
 
 .heading{
-  padding: 7rem;
+  padding: 8rem;
 }
 
 .btn {
@@ -110,22 +110,14 @@ body {
     zoom: 100%;
   }
 .heading{
-  z-index: 1999 !important;
-
-}
-.heading button{
-  z-index: 9999 !important;
-  
+  z-index: 999 !important;
 }
 .spline{
   position: absolute !important;
     top: 15rem !important;
-    
+    z-index: 0;
 }
-.heading{
-  padding:   2rem !important;
-  padding-bottom: 5rem !important;
-}
+
   .stickybtn
   {
     padding: 12px 15px !important;
@@ -315,10 +307,8 @@ font-size: 2rem !important;
 
 .mainfooter{
  
-  margin-top: 3rem !important;
+  margin-top: 6rem !important;
 }
-.css-3wvykd {
-  width: 78% !important;}
 
 
 
@@ -372,6 +362,10 @@ top: 55px !important;
   
 
 }
+
+.css-3wvykd {
+  width: 76% !important;
+ }
 
 
 
@@ -1000,8 +994,6 @@ margin-top: 4rem;
  
 
 }
-
-
 .contactcard{
   background-image: linear-gradient(to left top, #576cbc, #5589cc, #64a5d7, #80bfe0, #a5d7e8);
 }
@@ -1053,8 +1045,6 @@ background: radial-gradient(at left bottom, #0135FD, #F10D6C);
     flex-direction: row !important;
  }
   
-  
+ 
 
- .myorderbg{
-  background: #d8f3fc!important;
-}
+  
