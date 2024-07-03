@@ -33,7 +33,7 @@ function App() {
     // Set a timer to hide the loading screen after 3 seconds
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 1500); // Adjust the duration as needed
+    }, 3000); // Adjust the duration as needed
 
     // Cleanup the timer on component unmount
     return () => clearTimeout(timer);
