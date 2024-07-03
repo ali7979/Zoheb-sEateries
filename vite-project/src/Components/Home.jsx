@@ -13,9 +13,9 @@ export default function Header() {
     }
 
     return (
-        <div className='container fade-in' style={{ height: '100%' }}>
-            <Grid container columnSpacing={{ xs: 1, sm: 2, md: 1 }} sx={{ mt: { md: -6,xs:-3} }}>
-                <Grid item xs={12} md={6} sx={{ display: 'flex', alignItems: 'center' }}>
+        <div className='container fade-in' style={{height: '100%' }}>
+            <Grid container columnSpacing={{ xs: 1, sm: 2, md: 1 }} sx={{ mt: { xs:-3} }}>
+                <Grid item xs={12} md={6} >
                     <div className="heading slide-in-left">
                         <h1 className='poppins-extrabold'>
                             Good <span className='ylw'>Food</span> 
@@ -37,7 +37,7 @@ export default function Header() {
                         </Button>
                     </div>
                 </Grid>
-                <Grid item xs={12} md={6} sx={{ mt: { md: 3} }}>
+                <Grid item xs={12} md={6} sx={{ mt: { md: -5} }}>
                     <div className='container scale-in'>
                         <Spline className='spline float' scene="https://prod.spline.design/SEogRtqy0Y0sUCtt/scene.splinecode" />
                     </div>

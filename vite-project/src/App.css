@@ -58,7 +58,7 @@ body {
 }
 
 .heading{
-  padding: 8rem;
+  padding: 7rem !important;
 }
 
 .btn {
@@ -1046,3 +1046,6 @@ background: radial-gradient(at left bottom, #0135FD, #F10D6C);
   
 
   
+.myorderbg{
+  background: #a3ceee63;
+}

@@ -199,7 +199,7 @@ const onLogin= async (e)=>{
   return (
     <AppBar
       position="static"
-      sx={{ background: "transparent", color: "black", boxShadow: "none" }}
+      sx={{ background: "transparent", color: "black", boxShadow: "none" ,position:'relative',zIndex:'999'}}
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>

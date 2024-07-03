@@ -45,7 +45,7 @@ const Myorders = () => {
 
 
   return (
-    <div>
+    <div className="myorderbg" style={{height:'100vh'}}>
       <Grid
         container
         sx={{ display: "flex", justifyContent: "center" }}
