@@ -1,5 +1,5 @@
 import React, { useContext,useEffect,useState } from "react";
-import { Button, Box,Divider, Grid } from "@mui/material";
+import { Button, Box,Divider, Grid,CircularProgress } from "@mui/material";
 import TextField from "@mui/material/TextField";
 import { StoreContext } from "../context/StoreContext";
 import axios from "axios";
@@ -10,7 +10,9 @@ import emailjs from '@emailjs/browser';
 const PlaceOrder = () => {
   const { getTotalCartAmount,token,foodlist,cartItems,url,name } = useContext(StoreContext);
 
-  const [isSubmitting, setIsSubmitting] = useState("true");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [spinner, setspinner] = useState(false);
+
 
   const [data,setData] = useState ({
     firstName:"",
@@ -55,7 +57,8 @@ const PlaceOrder = () => {
           alert("Please fill in all required fields.");
           return;
         }
-        setIsSubmitting(true);
+        setIsSubmitting(false);
+        setspinner(true)
         let orderItems= [];
         foodlist.map((item)=>{
           if (cartItems[item._id]>0)
@@ -112,6 +115,8 @@ const PlaceOrder = () => {
           alert("Error in placing order");
         }
 
+        setspinner(false)
+alert(spinner)
         
 
     }
@@ -434,8 +439,25 @@ alert("Login first")
             </div>
 
          
+{spinner?
+           
 
-            <Button
+<Button
+              className="poppins-semibold"
+              sx={{
+   borderRadius: "40px",
+   mt: { xs: 0, md: 3 },
+   color: "#000",
+   backgroundColor: "#A5D7E8",
+ }}
+ variant="contained"
+ size="large"
+
+>
+Processing your Order <CircularProgress size={34} style={{color:'#576CBC',marginLeft:'12px'}} /> 
+</Button>
+
+: <Button
               className="poppins-semibold"
               sx={{
                 borderRadius: "20px",
@@ -449,11 +471,15 @@ alert("Login first")
               onClick={placeOrder}
               disabled={ isSubmitting }
             >
-              Proceed to Payment
+                             {isSubmitting  ? "Please fill out the required details"  : "Proceed to Payment"}
+
+
+
+                             
+
             </Button>
 
-
-
+}
            
           </Box>
 
