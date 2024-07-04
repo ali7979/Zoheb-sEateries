@@ -116,7 +116,6 @@ const PlaceOrder = () => {
         }
 
         setspinner(false)
-alert(spinner)
         
 
     }
@@ -454,7 +453,7 @@ alert("Login first")
  size="large"
 
 >
-Processing your Order <CircularProgress size={34} style={{color:'#576CBC',marginLeft:'12px'}} /> 
+Processing your Order <CircularProgress size={34} style={{color:'white',marginLeft:'12px'}} /> 
 </Button>
 
 : <Button
