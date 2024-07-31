@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from 'react'
-import Spline from '@splinetool/react-spline';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import { Link } from '@mui/material';
 import FastfoodIcon from '@mui/icons-material/Fastfood';
 import { useNavigate } from 'react-router-dom';
 import './animations.css'
+import { Suspense, lazy } from "react";
+const Spline =lazy(() => import('@splinetool/react-spline'));
+import Skeleton from '@mui/material/Skeleton';
+import Stack from '@mui/material/Stack';
+
+
 
 
 export default function Header() {
@@ -42,9 +47,18 @@ Bringing Joyful Flavors</p>
 
   <Grid item xs={12} md={6}>  
     <div className='container float  slide-in-left'> 
+    <Suspense fallback=
+{<div className='splinefallback'>
+    <Stack spacing={1}>
+
+<Skeleton variant="rectangular" width={210} height={60} />
+...... Loading component
+<Skeleton variant="rectangular" width={210} height={60} />
+</Stack>
+</div>}>
     {/* <Spline  scene="https://prod.spline.design/ZqkYaZBFkTp3yuN7/scene.splinecode" style={{position:'absolute' , top:0 ,left:0}} /> */}
    <Spline className='spline' scene="https://prod.spline.design/SEogRtqy0Y0sUCtt/scene.splinecode" />
-
+</Suspense>
 </div>
   </Grid>
  

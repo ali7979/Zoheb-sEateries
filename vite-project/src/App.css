@@ -15,9 +15,15 @@ body {
 .container
 {
   height: 100vh;
- 
 
 }
+.splinefallback
+{
+  position: absolute !important;
+  top: 50% !important;
+  left: 30%;
+}
+
 .stickybtn{
   position:fixed !important;
   bottom: 5%;
@@ -395,6 +401,13 @@ padding: 0 !important;
 .backbtn{
   display: block !important;
   position: absolute !important;
+}
+
+.splinefallback
+{
+  position: relative !important;
+  top: 30% !important;
+  left: 25% !important;
 }
 
 }
@@ -1046,5 +1059,5 @@ background: radial-gradient(at left bottom, #0135FD, #F10D6C);
  }
   
  
-
+ 
   
